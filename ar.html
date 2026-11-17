@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="theme-color" content="#0b1626">
+<title>Guía AR · Gemelo digital</title>
+<link rel="stylesheet" href="src/ar.css">
+</head>
+<body data-modo="inicio">
+<video id="video" playsinline muted autoplay></video>
+<canvas id="lienzo"></canvas>
+
+<section id="inicio" class="pantalla">
+  <div class="tarjeta">
+    <h1 id="inSitio">Guía AR</h1>
+    <p id="inSub" class="suave"></p>
+    <div id="inAncla"></div>
+    <ol class="pasos">
+      <li>Párate frente al QR, a un metro más o menos.</li>
+      <li>Toca <b>Iniciar</b> y permite la cámara y el movimiento.</li>
+      <li>Apunta la cámara al QR de frente y toca <b>Alinear</b>.</li>
+    </ol>
+    <button id="btnIniciar" class="btn grande" disabled>Iniciar cámara y sensores</button>
+    <p id="msgInicio" class="aviso"></p>
+    <p class="suave pequeno">La guía se alinea en cada QR. Si caminas varios metros, escanea el siguiente QR del camino para mantenerla exacta.</p>
+  </div>
+</section>
+
+<header id="barra">
+  <div><b id="hSitio"></b><small id="hAncla"></small></div>
+  <button id="btnAjustes" class="btn icono" aria-label="Ajustes">⚙</button>
+</header>
+
+<div id="mira">
+  <div class="cruz"></div>
+  <p>Apunta la cámara al QR de frente y toca <b>Alinear</b></p>
+  <button id="btnAlinear" class="btn grande">Alinear</button>
+</div>
+
+<aside id="panel">
+  <div id="guia" class="tarjeta">
+    <div id="brujula" class="oculto"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 L20 21 L12 16 L4 21 Z"/></svg></div>
+    <div id="guiaTexto"></div>
+  </div>
+  <div id="destinos"></div>
+  <button id="btnRealinear" class="btn">↻ Volver a alinear</button>
+</aside>
+
+<div id="ajustes" class="oculto tarjeta">
+  <h2>Ajustes</h2>
+  <label>Altura del iPad sobre el piso: <b id="vAltura"></b> m<input id="rAltura" type="range" min="0.8" max="1.8" step="0.05"></label>
+  <label>Ángulo de visión de la cámara: <b id="vFov"></b>°<input id="rFov" type="range" min="45" max="85" step="1"></label>
+  <div class="fila"><span>Mover las flechas</span><button id="btnIzq" class="btn">◀ 2°</button><button id="btnDer" class="btn">2° ▶</button></div>
+  <label>Estoy en otro QR<select id="selAncla"></select></label>
+  <button id="btnCerrarAjustes" class="btn">Cerrar</button>
+</div>
+<script type="module" src="src/ar.js"></script>
+</body>
+</html>

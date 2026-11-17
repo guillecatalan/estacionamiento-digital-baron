@@ -1,0 +1,183 @@
+{
+  "version": 1,
+  "sitio": {
+    "nombre": "Edificio Barón",
+    "subtitulo": "Atención a clientes",
+    "urlAr": "https://guillecatalan.github.io/estacionamiento-digital-baron/ar.html"
+  },
+  "modelo": "./assets/baron/Baron%20Test.lcc2",
+  "pisoY": -0.589,
+  "vistaInicial": null,
+  "puntos": [
+    {
+      "id": "p_wd3ak9",
+      "nombre": "Estacionamiento baron",
+      "tipo": "estacionamiento",
+      "pos": [
+        17.307,
+        -0.589,
+        16.098
+      ],
+      "descripcion": "Acceso a instalaciones corporativas"
+    },
+    {
+      "id": "p_dpv5cm",
+      "nombre": "Edificio Baron",
+      "tipo": "otro",
+      "pos": [
+        0.923,
+        -0.589,
+        -21.349
+      ],
+      "descripcion": ""
+    },
+    {
+      "id": "p_o1ckhx",
+      "nombre": "Atención a clientes",
+      "tipo": "atencion",
+      "pos": [
+        40.945,
+        -0.589,
+        29.667
+      ],
+      "descripcion": ""
+    }
+  ],
+  "rutas": [
+    {
+      "id": "r_797d2a",
+      "nombre": "Ruta Acceso Baron",
+      "desde": "Entrada",
+      "destino": "p_dpv5cm",
+      "color": "#ffd166",
+      "puntos": [
+        [
+          20.207,
+          -0.589,
+          49.098
+        ],
+        [
+          8.261,
+          -0.589,
+          3.312
+        ],
+        [
+          19.644,
+          -0.589,
+          -2.13
+        ],
+        [
+          9.591,
+          -0.589,
+          -16.956
+        ],
+        [
+          1.24,
+          -0.589,
+          -20.671
+        ]
+      ]
+    },
+    {
+      "id": "r_gqdtgi",
+      "nombre": "Ruta",
+      "desde": "Entrada",
+      "destino": "p_dpv5cm",
+      "color": "#ff1443",
+      "puntos": [
+        [
+          8.239,
+          -0.589,
+          35.302
+        ],
+        [
+          0.156,
+          -0.589,
+          5.598
+        ],
+        [
+          1.5,
+          -0.589,
+          -22.927
+        ]
+      ]
+    },
+    {
+      "id": "r_zwfcjw",
+      "nombre": "Ruta",
+      "desde": "Entrada",
+      "destino": "p_o1ckhx",
+      "color": "#14ff24",
+      "puntos": [
+        [
+          25.444,
+          -0.589,
+          47.817
+        ],
+        [
+          40.098,
+          -0.589,
+          40.42
+        ],
+        [
+          42.428,
+          -0.589,
+          38.211
+        ],
+        [
+          41.066,
+          -0.589,
+          29.482
+        ]
+      ]
+    }
+  ],
+  "carteles": [
+    {
+      "id": "c_0qub9u",
+      "texto": "prueba",
+      "pos": [
+        16.506,
+        0.722,
+        42.347
+      ],
+      "escala": 1
+    },
+    {
+      "id": "c_ocwsup",
+      "texto": "Electric Carsss",
+      "pos": [
+        13.265,
+        1.748,
+        27.505
+      ],
+      "escala": 1
+    },
+    {
+      "id": "c_ia2fyl",
+      "texto": "ppp",
+      "pos": [
+        20.619,
+        0.945,
+        26.415
+      ],
+      "escala": 1
+    }
+  ],
+  "anclajes": [
+    {
+      "id": "a_4xhhpo",
+      "nombre": "QR 1",
+      "qr": [
+        26.098,
+        -0.589,
+        45.995
+      ],
+      "pie": [
+        25.047,
+        -0.589,
+        47.898
+      ]
+    }
+  ]
+}

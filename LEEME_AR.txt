@@ -1,0 +1,37 @@
+PAQUETE AR - Edificio Barón
+Generado: 17-11-2026, 10:44:11 a. m.
+Direccion publica configurada: https://guillecatalan.github.io/estacionamiento-digital-baron/ar.html
+
+QUE ES
+Guia de realidad aumentada para iPad/iPhone (Safari) y Android (Chrome): muestra las flechas y los destinos sobre la camara,
+alineados en cada QR. No incluye el modelo 3D (no se necesita para el AR).
+
+1) PUBLICAR (necesita HTTPS: sin HTTPS la camara no funciona en el iPad)
+   - GitHub Pages: crea un repositorio, sube TODO el contenido de esta carpeta (ar.html, src, engine, config, qr) y activa
+     Settings > Pages > Deploy from a branch. La direccion sera https://USUARIO.github.io/REPOSITORIO/ar.html
+   - Netlify Drop (app.netlify.com/drop): arrastra la carpeta y entrega una direccion https.
+   - La direccion final debe ser EXACTAMENTE la configurada arriba. Si es otra, vuelve al editor, corrigela y exporta de nuevo
+     (los QR llevan la direccion grabada).
+   - Ojo: lo que publicas en internet lo ve cualquiera con el enlace (nombres de destinos y coordenadas de rutas).
+     Para uso interno restringido, consulta con TI un hosting interno con HTTPS.
+
+2) IMPRIMIR LOS QR
+   Abre qr/imprimir.html e imprime (un QR por hoja, 12 cm). Pegalos planos, a 1,2-1,5 m de altura, en el lugar marcado con la
+   herramienta "Anclaje QR". Quien escanea se para en el circulo naranja del editor (1-2 m del QR), mirando hacia el.
+
+3) USO EN EL IPAD
+   Camara del iPad > escanear el QR > tocar el enlace > "Iniciar" > permitir camara y "movimiento y orientacion" >
+   apuntar al QR de frente > "Alinear" > elegir destino.
+
+4) ACTUALIZAR
+   Edita en el editor > Exportar paquete AR y vuelve a subir config/senaletica.json (basta ese archivo si no cambiaron los QR).
+
+5) LIMITACIONES (importante)
+   - La guia sabe donde estas SOLO cuando alineas con un QR. Despues sigue la ROTACION del iPad, pero NO tus pasos: tras algunos
+     metros las flechas dejan de coincidir con el piso. Por eso se pone un QR en cada punto de decision (pantalla: "Proximo QR").
+   - El giroscopio puede derivar con el tiempo: usa "Volver a alinear".
+   - Seguimiento continuo de la posicion en iPad requiere una app nativa (ARKit) o un SDK con SLAM; este paquete no lo incluye.
+
+6) REPLICAR EN OTRA SUCURSAL
+   Las coordenadas pertenecen al modelo 3D de ESTE lugar y no sirven en otro. Para otra sucursal: escanear su modelo, abrir el
+   editor con ese modelo, marcar destinos, rutas y anclajes, y exportar su propio paquete. Esta carpeta sirve como estructura.
